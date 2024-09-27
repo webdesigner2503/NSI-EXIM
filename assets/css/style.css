@@ -513,7 +513,7 @@ nav p {
     width: 100%;
     overflow: hidden;
     padding-top: 25.25%;
-    margin: 50px auto;
+    /* margin: 50px auto; */
 }
 
 .features-wrapper-iframe::before {
@@ -1602,9 +1602,9 @@ button.contact.btn.btn-primary {
         width: 200px;
         height: 200px;
     }
-    .features-wrapper-iframe {
+    /* .features-wrapper-iframe {
         margin: 10px auto;
-    }
+    } */
 
     .why-choose-title h2, .steps-wrapper-title, .categories-title, .map-title, .section-title {
         font-size: 26px;
