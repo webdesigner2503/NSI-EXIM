@@ -43,32 +43,40 @@ p {
 
 /* padding css */
 .section-ptb {
-    padding: 100px 0px;
+    padding: 50px 0px 100px;
 }
+
 .section-pt {
     padding-top: 100px;
 }
+
 .section-pb {
     padding-bottom: 100px;
 }
+
 @media(max-width: 992px) {
     .section-ptb {
         padding: 60px 0px;
     }
+
     .section-pt {
         padding-top: 60px;
     }
+
     .section-pb {
         padding-bottom: 60px;
     }
 }
+
 @media(max-width: 767px) {
     .section-ptb {
         padding: 30px 0px;
     }
+
     .section-pt {
         padding-top: 30px;
     }
+
     .section-pb {
         padding-bottom: 30px;
     }
@@ -79,6 +87,17 @@ p {
 /* ======================= */
 /* Header */
 /* ======================= */
+
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+}
+
+main {
+    margin-top: 200px;
+}
 
 .header-heading {
     background-color: #F5AB54;
@@ -810,7 +829,7 @@ footer a {
 }
 
 .footer-hr2 {
-    margin-top: -200px;
+    margin-top: -250px;
 }
 
 .footer-hr3 {
@@ -1070,7 +1089,8 @@ footer a {
 input#name,
 input#email,
 input#number,
-textarea#message {
+textarea#message.ab-box-outer-wrapper,
+select.form-select {
     background-color: #00000009;
     height: 45px;
     font-size: 14px;
@@ -1083,6 +1103,8 @@ textarea#message {
 
 textarea#message {
     height: 150px;
+    background-color: #00000009;
+    font-size: 14px;
 }
 
 .contact-form-contact {
@@ -1174,6 +1196,47 @@ button.contact.btn.btn-primary {
     box-shadow: 4px 4px 10px 0 #ffd4a3;
 }
 
+.carousel-item img {
+    height: 500px;
+    border-radius: 20px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1 !important;
+}
+
+.categorie-slider {
+    padding-top: 50px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.carousel-control-prev div,
+.carousel-control-next div{
+    background-color: #304ba6;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
+    margin: 0 -50px;
+}
+
 /* ======================================== */
 /* Categories Section End */
 /* ======================================== */
@@ -1232,7 +1295,22 @@ button.contact.btn.btn-primary {
 /* Terms Section End */
 /* ======================================== */
 
+/* ======================================== */
+/* inquiry Section Start */
+/* ======================================== */
 
+.categories-drop{
+    width: 100%;
+}
+
+.form-select:focus {
+    border-color: #f5ab54 !important;
+    box-shadow: none !important;
+}
+
+/* ======================================== */
+/* inquiry Section End */
+/* ======================================== */
 
 /* Home page Responsive Starts */
 @media screen and (max-width: 1580px) {
@@ -1307,6 +1385,10 @@ button.contact.btn.btn-primary {
 
     .features-wrapper-iframe {
         padding-top: 35.25%;
+    }
+
+    main {
+        margin-top: 290px;
     }
 }
 
@@ -1540,12 +1622,14 @@ button.contact.btn.btn-primary {
     .experience-box {
         padding: 60px 20px;
     }
+
     .privacy,
     .terms {
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
-    } 
+    }
+
     .privacy-sub-heading,
     .terms-sub-heading {
         font-size: 20px;
@@ -1570,7 +1654,7 @@ button.contact.btn.btn-primary {
         padding-top: 40px;
     }
 
-    
+
 
     .why-choose {
         margin: 40px auto !important;
@@ -1580,19 +1664,24 @@ button.contact.btn.btn-primary {
     .experience-box .number {
         font-size: 40px;
     }
+
     .experience-box {
         gap: 10px;
     }
+
     .experience-box .text {
         font-size: 16px;
         line-height: 20px;
     }
+
     .con-icon {
         flex: 0 0 30px;
     }
+
     .contact-info-heading {
         font-size: 18px;
     }
+
     .contact-info-text {
         font-size: 14px;
     }
@@ -1602,17 +1691,23 @@ button.contact.btn.btn-primary {
         width: 200px;
         height: 200px;
     }
+
     /* .features-wrapper-iframe {
         margin: 10px auto;
     } */
 
-    .why-choose-title h2, .steps-wrapper-title, .categories-title, .map-title, .section-title {
+    .why-choose-title h2,
+    .steps-wrapper-title,
+    .categories-title,
+    .map-title,
+    .section-title {
         font-size: 26px;
     }
 
 }
 
 @media(max-width: 479px) {
+
     /* .who-we-are .right-wrapper {
         padding: 150px 0 100px;
     } */
