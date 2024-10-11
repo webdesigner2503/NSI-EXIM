@@ -170,6 +170,7 @@ nav p {
 .nav-dropdown {
     width: 100%;
     transition: all 0.5s ease;
+    border-radius: 20px;
 }
 
 .nav-dropdown:hover {
