@@ -24,3 +24,15 @@ const swiper = new Swiper(".mySwipersecond", {
         },
     },
 });
+
+
+window.addEventListener('scroll', function () {
+    var content = document.getElementById('myHeader');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 10) {
+        content.classList.add('sticky');
+    } else {
+        content.classList.remove('sticky');
+    }
+});

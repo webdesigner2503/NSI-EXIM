@@ -93,10 +93,19 @@ header {
     top: 0px;
     z-index: 10;
     width: 100%;
+    transition: 0.3s all ease;
 }
 
 main {
-    margin-top: 200px;
+    margin-top: 150px;
+}
+
+header.sticky {
+    box-shadow: 0px 0px 30px 0px #00000012;
+}
+
+header.sticky .header-heading {
+    display: none;
 }
 
 .header-heading {
@@ -146,13 +155,14 @@ nav p {
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-color: #FFFFFF;
     border: 1px solid #5151511f;
     border-radius: 20px;
     box-shadow: 8px 5px 12px 0px #00000014;
     z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .dropdown-content a {
@@ -178,6 +188,7 @@ nav p {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
 }
 
 .navbar-image img {
@@ -245,6 +256,53 @@ nav p {
     height: auto;
 }
 
+
+/* ======================= */
+    /* hero-section-area css */
+/* ================================ */
+.hero-section-area .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.hero-section-area .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.hero-section-area .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-image-wrap {
+    width: 100%;
+    height: 100%;
+    background: url(../image/hero-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    padding: 220px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  .hero-heading h2 {
+    color: #fff;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1;
+  }
+.inquiry-img img {
+    border-radius: 30px;
+    width: 100%;
+}
 
 /* ======================= */
 /* Hero banner */
@@ -528,6 +586,66 @@ nav p {
 .choose-box4 .why-choose-img {
     background: linear-gradient(90deg, rgba(131, 192, 249, 1) 0%, rgba(31, 97, 219, 1) 100%);
 }
+
+/* ==================== */
+/* solution-wrapper css */
+/* =========================== */
+.solution-wrapper {
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.sol-flex-wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sol-box {
+    background-color: #FFF;
+    border-radius: 40px;
+    border: 1px solid #00000015;
+
+    flex: 0 0 calc(100% / 5 - 20px);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.4s all;
+}
+
+.sol-box:hover {
+    box-shadow: -1px 27px 30px 0px #00000008;
+}
+
+.sol-box .icon-wrapper {
+    width: 100px;
+    height: 100px;
+    transition: 0.3s all;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.sol-box .icon-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.sol-box:hover .icon-wrapper {
+    transform: scale(1.1);
+}
+
+.sol-box h3 {
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+
+
 
 /* ======================= */
 /* features-wrapper */
@@ -1402,6 +1520,22 @@ button:not(:disabled) {
     main {
         margin-top: 290px;
     }
+
+    .sol-flex-wrapper {
+        justify-content: center;    
+    }
+
+    .sol-box {
+        flex: 0 0 calc(100% / 3  - 20px);
+    }
+
+    /* hero-section-area css */
+    .hero-image-wrap {
+        padding: 200px 0px;
+    }
+    .hero-heading h2 {
+        font-size: 80px;
+    }
 }
 
 @media(max-width: 992px) {
@@ -1572,6 +1706,14 @@ button:not(:disabled) {
         position: relative;
     }
 
+    /* hero-section-area css */
+    .hero-image-wrap {
+        padding: 180px 0px;
+    }
+    .hero-heading h2 {
+        font-size: 60px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -1587,6 +1729,11 @@ button:not(:disabled) {
     .hero-image {
         max-width: 90%;
         margin: 0 auto;
+    }
+
+
+    .sol-box {
+        flex: 0 0 calc(100% / 2  - 20px);
     }
 
     /* .why-choose,
@@ -1666,7 +1813,14 @@ button:not(:disabled) {
         padding-top: 40px;
     }
 
+    .sol-box {
+        flex: 0 0 calc(100% / 1  - 20px);
+        padding: 20px;
+    }  
 
+    .solution-wrapper  {
+        padding: 50px 10px;
+    }
 
     .why-choose {
         margin: 40px auto !important;
@@ -1714,6 +1868,13 @@ button:not(:disabled) {
     .map-title,
     .section-title {
         font-size: 26px;
+    }
+    /* hero-section-area css */
+    .hero-image-wrap {
+        padding: 120px 0px;
+    }
+    .hero-heading h2 {
+        font-size: 40px;
     }
 
 }

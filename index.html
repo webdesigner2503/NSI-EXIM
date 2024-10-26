@@ -15,7 +15,7 @@
 
 <body>
 
-    <header>
+    <header id="myHeader">
         <div class="header-heading">
             <div class="container-fluid p-1">
                 <div class="container d-flex justify-content-center align-items-center gap-sm-4 gap-2 text-center">
@@ -687,6 +687,42 @@
 
     <main class="main-page">
 
+        <div class="hero-section-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="hero-image-wrap">
+                        <div class="container">
+                            <div class="row align-items-center hero-wrapper">
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-6">
+                                    <div class="swiper mySwiperhero">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="hero-heading">
+                                                    <h2 class="text-lg-end text-center">We Are In Import-Export Business</h2>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="hero-heading">
+                                                    <h2 class="text-lg-end text-center">We Are In Import-Export Business</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="top-sections">
             <section class="hero-section d-none">
                 <div class="container">
@@ -876,7 +912,7 @@
                 </div>
             </section>
 
-            <section class="container-fluid p-0">
+            <section class="container-fluid p-0 d-none">
                 <div class="hero-sec-img">
                     <img src="assets/image/hero-background.jpg" alt="image" width="100%">
                 </div>
@@ -956,6 +992,48 @@
                 </div>
             </section>
         </div>
+
+        <section class="solution-wrapper">
+            <div class="container">
+                <div class="row sol-flex-wrapper">
+
+                    <div class="sol-box">
+                        <div class="icon-wrapper">
+                            <img src="assets/image/Link.svg" alt="icon">
+                        </div>
+                        <h3>shipping solutions</h3>
+                    </div>
+
+                    <div class="sol-box">
+                        <div class="icon-wrapper">
+                            <img src="assets/image/Link-1.svg" alt="icon">
+                        </div>
+                        <h3>Inland Transportation & Logistics Solutions</h3>
+                    </div>
+
+                    <div class="sol-box">
+                        <div class="icon-wrapper">
+                            <img src="assets/image/Link-2.svg" alt="icon">
+                        </div>
+                        <h3>Air Cargo Solution</h3>
+                    </div>
+
+                    <div class="sol-box">
+                        <div class="icon-wrapper">
+                            <img src="assets/image/Link-3.svg" alt="icon">
+                        </div>
+                        <h3>Digital Business Solutions</h3>
+                    </div>
+
+                    <div class="sol-box">
+                        <div class="icon-wrapper">
+                            <img src="assets/image/Link-4.svg" alt="icon">
+                        </div>
+                        <h3>Cargo Cover Solutions</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="features-wrapper">
             <div class="features-wrapper-iframe">
@@ -1298,11 +1376,38 @@
         </div>
     </footer>
 
+    
     <!-- Script Link -->
     <script src="assets/script/bootstrap.bundle.min.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/script/script.js"></script>
+
+    <!-- hero-section-area js -->
+    <script>
+        const swiperHero = new Swiper(".mySwiperhero", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true,
+            },
+            breakpoints: {
+                '1200': {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+                '0': {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+            },
+        
+        });
+    </script>
 
     <!-- Initialize Swiper -->
     <script>
