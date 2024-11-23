@@ -700,29 +700,29 @@
         <section class="contact-form section-pb">
             <div class="container">
                 <div class="row align-items-center justify-content-center gap-5">
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-5 col-12">
                         <div class="inquiry-img">
                             <img src="assets/image/inquiry.jpg" alt="inquiry-img">
                         </div>
                     </div>
                     <div class="col-md-5 col-12">
-                        <form>
+                        <form action="contact_form_handler.php" method="POST">
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
-                                    required>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Enter your name" required>
                             </div>
-                            <div class="d-flex gap-md-4 flex-md-row flex-column ">
+                            <div class="d-flex gap-md-4 flex-md-row flex-column">
                                 <div class="mb-3 contact-form-contact">
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email"
-                                        required>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Enter your email" required>
                                 </div>
                                 <div class="mb-3 contact-form-contact">
-                                    <input type="email" class="form-control" id="number" placeholder="Enter your number"
-                                        required>
+                                    <input type="text" class="form-control" id="number" name="number"
+                                        placeholder="Enter your number" required>
                                 </div>
                             </div>
                             <div class="categories-drop mb-3">
-                                <select class="form-select">
+                                <select class="form-select" name="category" required>
                                     <option class="optionGroup" selected disabled>Categories</option>
                                     <optgroup label="Agriculture / Fertilizer">
                                         <option>Agriculture</option>
@@ -731,10 +731,10 @@
                                     <optgroup label="Food / Fruits">
                                         <option>Banana</option>
                                         <option>Orange</option>
-                                        <option>Graps</option>
+                                        <option>Grapes</option>
                                     </optgroup>
                                     <optgroup label="Vegetable">
-                                        <option>Green-cilly</option>
+                                        <option>Green-chilly</option>
                                         <option>Onion</option>
                                     </optgroup>
                                     <optgroup label="Marbles">
@@ -743,7 +743,7 @@
                                     </optgroup>
                                     <optgroup label="Textiles">
                                         <option>Cotton</option>
-                                        <option>Slik</option>
+                                        <option>Silk</option>
                                     </optgroup>
                                     <optgroup label="Bathroom Faucet">
                                         <option>Faucet</option>
@@ -751,12 +751,11 @@
                                     </optgroup>
                                     <optgroup label="Mattress">
                                         <option>Mattress</option>
-                                        <option>Mattress</option>
                                     </optgroup>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" id="message" rows="5"
+                                <textarea class="form-control" id="message" name="message" rows="5"
                                     placeholder="Write your message here" required></textarea>
                             </div>
                             <div class="d-flex justify-content-center">
@@ -765,6 +764,7 @@
                                     Message</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
